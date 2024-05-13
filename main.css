@@ -149,17 +149,17 @@ align-items: center;
 .menu-sid {
     width: 100%;
     display: flex;
-
+    justify-content: left;
+    padding: 12px;
 }
 
-
-
-
-
-
-
-
-
+.sidebar-toggle{
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    padding: 6px;
+    }
 
 .sidebar-toggle2 {
     font-size: 30px;
@@ -170,9 +170,7 @@ align-items: center;
   display: none;
 }
 
-
 /*pefil*/
-
 .icons-size{
     color: #555;
     font-size: 22px;
@@ -184,3 +182,50 @@ align-items: center;
     display: flex;
     object-fit: cover;
 }
+
+.acctionimg .profile {
+    border-radius: 50%;
+    cursor: pointer;
+    height: 36px;
+    overflow: hidden;
+    width: 36px;
+}
+
+.acctionimg .profile img {
+    width: 100%;
+    top: 0;
+    object-fit: cover;
+    left: 0;
+    height: 100%;
+}
+
+.acctionimg .menu {
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 10px 20px;
+    position: absolute;
+    right: 10px;
+    width: 200px;
+    transition: 0.5s;
+    top: 120px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.acctionimg .menu.active{
+    opacity: 1;
+    top: 60px;
+    visibility: visible;
+}
+
+.acctionimg.menu::before {
+    background-color: white;
+    content: '';
+    height: 20px;
+    position: absolute;
+    right: 14px;
+    transform: rotate(45deg);
+    top: -5px;
+}
+
